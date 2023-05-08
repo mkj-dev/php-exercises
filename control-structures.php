@@ -151,3 +151,23 @@ do {
     }    
   }
 } while ($i < $array_length);
+
+/* Exercise 8
+  The $people array contains the data of three students: name and year of birth.
+  List the names of all students and their combined ages. Use a foreach loop.
+  Attention! Age, i.e. how old they are now. This information is not in the array, it must be calculated.
+*/
+echo "<h2>Foreach loop</h2>";
+$currentYear = 2023;
+$combinedAges = 0;
+$people = [
+    ['name' => 'Jan Kowalski', 'birth' => 1980],
+    ['name' => 'Piotr Nowak', 'birth' => 1994],
+    ['name' => 'Anna Kowalczyk', 'birth' => 1982]
+];
+foreach ($people as $person) {
+  $combinedAges += $currentYear - $person['birth'];
+  echo $person['name'] . " " . ($currentYear - $person['birth']);
+  echo "</br>";
+}
+echo "<h3>Combined ages: " . $combinedAges . "</h3>";
