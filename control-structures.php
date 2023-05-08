@@ -23,3 +23,23 @@ if ($area === 25) {
 } else {
   echo "Area is not equal to 25";
 }
+
+/* Exercise 3
+  Divide the $people into teams of 4.
+  - If the number of people is enough, display the message: Teams: [number of teams].
+  - If only one person is left without a team, just display Too Few People!.
+  - In a situation where there is not enough room for more people, 
+    write out: Missing: [number of people missing from a full team]. Use elseif. 
+  Hint: remember the modulo operator.
+*/
+$people = 16;
+// $people = 14;
+// $people = 13;
+$modulo = $people % 4;
+if ($modulo === 0) {
+  echo "<h3>Teams: " . $people / 4;
+} elseif ($modulo > 1) {
+  echo "<h3>Missing: " . 4 - $modulo . "</h3>";
+} else {
+  echo "<h3>Too few people!</h3>";
+}
