@@ -119,3 +119,14 @@ for ($row = 1; $row <= 10; $row++) {
   }
   echo '<br>';
 }
+
+/* Exercise 6
+  Change Exercise 1 from the previous lesson to use a while loop:
+  "The number is 50. Decrease it by 8 and print the reduced value, but only until the number is greater than 0."
+*/
+echo "<h2>While Loop</h2>";
+$num50 = 50;
+while ($num50 > 0) {
+  echo "<h3 style='display:inline'>" . $num50 . " " . "</h3>";
+  $num50 -= 8;
+}
