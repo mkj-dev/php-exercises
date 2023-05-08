@@ -82,3 +82,40 @@ echo match ($operation2) {
     "/" => "<h3>" . $number1 / $number2 . "</h3>",
     default => "<h3>Invalid operation</h3>"
 };
+
+/* Exercise 5
+  Given the number 50. Decrease it by 8 and print the reduced value,
+  but only until the number is greater than 0. Use a for loop.
+*/
+echo "<h2>For Loops</h2>";
+
+for ($number50 = 50; $number50 > 0; $number50 -= 8) {
+  echo "<h3 style='display:inline'>" . $number50 . " " . "</h3>";
+}
+echo "</br>";
+/* Exercise 5.1
+  Using one for loop, calculate the sum of all even numbers from 0 to 100 and display it on the screen.
+  Also, count the number of even numbers greater than 50.
+*/
+$sum = 0;
+$greaterThan50Count = 0;
+for ($num = 0; $num <= 100; $num++) {
+  if ($num % 2 === 0) {
+    $sum += $num;
+  }
+  if ($num % 2 === 0 && $num > 50) {
+    $greaterThan50Count += 1;
+  }
+}
+echo "<h3>Sum of all even numbers from 0 to 100: " . $sum . "</h3>";
+echo "<h3>Number of even numbers greater than 50: " . $greaterThan50Count . "</h3>";
+
+/* Exercise 5.2
+  (Harder) Do the multiplication table in the form of a simple table.
+*/
+for ($row = 1; $row <= 10; $row++) {
+  for ($column = 1; $column <= 10; $column++) {
+      echo $row * $column . ' | ';
+  }
+  echo '<br>';
+}
