@@ -130,3 +130,24 @@ while ($num50 > 0) {
   echo "<h3 style='display:inline'>" . $num50 . " " . "</h3>";
   $num50 -= 8;
 }
+
+/* Exercise 7 
+  Using one do-while loop, print out all the odd numbers in the ranges 20-40 and 60-80.
+*/
+echo "<h2>Do-while Loop</h2>";
+$array20_40 = range(20, 40);
+$array60_80 = range(60, 80);
+$array_length = count($array20_40); // Both arrays are the same length
+do {
+  for ($i = 0; $i < $array_length; $i++) {
+    if ($array20_40[$i] % 2 !== 0) {
+      echo $array20_40[$i] . " ";
+    }
+  }
+  echo "</br>";
+  for ($i = 0; $i < $array_length; $i++) {
+    if ($array60_80[$i] % 2 !== 0) {
+      echo $array60_80[$i] . " ";
+    }    
+  }
+} while ($i < $array_length);
