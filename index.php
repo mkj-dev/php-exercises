@@ -17,5 +17,7 @@
     include_once('./control-structures.php');
     echo "<h2 class='title'>Functions</h2>";
     include_once('./functions.php');
+    echo "<h2 class='title'>Object Oriented Programming</h2>";
+    include_once('./oop.php');
   ?>
 </html>
