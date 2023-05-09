@@ -37,3 +37,33 @@ function prepareCart(float $price = 35.0, float $money = 120.0, bool $promotion 
   }
 }
 prepareCart();
+
+/* Exercise 2
+  Create an isAdult function that returns true if the age given by the argument is an adult, or false if not.
+*/
+echo "<h2>Returning data</h2>";
+
+function isAdult(int $age): bool {
+  if ($age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+echo "Are you an adult?: ";
+var_dump(isAdult(30));
+
+/* Exercise 2.1
+  Prepare a rectangleArea function that calculates the area of a rectangle with sides $sideA and $sideB given by the arguments.
+  Return calculated area from function and display.
+  Assign the appropriate types for the arguments and the return value, assuming that we will only operate with integers.
+*/
+$sideA = 12;
+$sideB = 5;
+
+function rectangleArea(int $sideA, int $sideB): int {
+  return $sideA * $sideB;
+}
+
+echo "<h3>Rectangle area: " . rectangleArea($sideA, $sideB) . "</h3>";
